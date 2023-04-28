@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\backimage.cpp" />
+    <ClCompile Include="source\backone.cpp" />
+    <ClCompile Include="source\clearpoint.cpp" />
+    <ClCompile Include="source\field.cpp" />
+    <ClCompile Include="source\gamescene.cpp" />
+    <ClCompile Include="source\gamescenechanger.cpp" />
+    <ClCompile Include="source\libs\scene.cpp" />
+    <ClCompile Include="source\libs\scenechanger.cpp" />
+    <ClCompile Include="source\libs\scenemanager.cpp" />
+    <ClCompile Include="source\libs\testplayer.cpp" />
+    <ClCompile Include="source\libs\testscene.cpp" />
+    <ClCompile Include="source\main\app.cpp" />
+    <ClCompile Include="source\main\winmain.cpp" />
+    <ClCompile Include="source\mouseedit.cpp" />
+    <ClCompile Include="source\movebox.cpp" />
+    <ClCompile Include="source\player.cpp" />
+    <ClCompile Include="source\save.cpp" />
+    <ClCompile Include="source\selectmode.cpp" />
+    <ClCompile Include="source\stageselect.cpp" />
+    <ClCompile Include="source\titleobject.cpp" />
+    <ClCompile Include="source\titlescene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\backimage.h" />
+    <ClInclude Include="source\libs\object.h" />
+    <ClInclude Include="source\libs\scene.h" />
+    <ClInclude Include="source\libs\scenechanger.h" />
+    <ClInclude Include="source\libs\scenemanager.h" />
+    <ClInclude Include="source\libs\testplayer.h" />
+    <ClInclude Include="source\libs\testscene.h" />
+    <ClInclude Include="source\libs\myDxLib.h" />
+    <ClInclude Include="source\main\app.h" />
+    <ClInclude Include="source\main\config.h" />
+    <ClInclude Include="source\player.h" />
+    <ClInclude Include="source\save.h" />
+    <ClInclude Include="source\titlescene.h" />
+    <ClInclude Include="source\gamescene.h" />
+    <ClInclude Include="source\titleobject.h" />
+    <ClInclude Include="source\field.h" />
+    <ClInclude Include="source\gamescenechanger.h" />
+    <ClInclude Include="source\movebox.h" />
+    <ClInclude Include="source\stageselect.h" />
+    <ClInclude Include="source\selectmode.h" />
+    <ClInclude Include="source\selected.h" />
+    <ClInclude Include="source\mouseedit.h" />
+    <ClInclude Include="source\clearpoint.h" />
+    <ClInclude Include="source\backone.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{71365B7B-12B3-4558-AA62-93B1629A3CD8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DxLibSampleProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>DxLibSampleProject</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>DxLib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>DxLib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>DxLib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>DxLib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
